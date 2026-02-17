@@ -1,10 +1,49 @@
 /*
+https://www.dafont.com/de/monogramos.font
+https://www.dafont.com/de/diamondgrams.font
+*/
+:root {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --logo-text-proton-color: black;
+}
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
 }
-*/
-:root {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+    background-color: black;
+    color: white;
+    /*padding-inline: 12.5%;*/
+}
+nav {
+    background: #ffb4b4;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 180, 180, 1) 0%,
+        rgba(255, 255, 255, 1) 20%
+    );
+    color: black;
+}
+.nav {
+    font-size: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 1%;
+}
+h1 {
+    height: 100%;
+    text-align: center;
+    align-self: center;
+}
+h4 {
+    justify-self: center;
+}
+svg {
+    color: black;
+    width: 1.5rem;
 }
