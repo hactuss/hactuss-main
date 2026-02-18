@@ -14,12 +14,12 @@ https://www.dafont.com/de/diamondgrams.font
 html {
     background-color: rgb(240, 240, 240);
     cursor:
-        url("../lib/assets/Cursor.cur") 2 2,
+        url("./lib/assets/Cursor.cur") 2 2,
         auto;
 }
 body {
-    color: hotpink;
-    accent-color: hotpink;
+    color: blue;
+    accent-color: blue;
     padding-inline: 12.5%;
 }
 main {
