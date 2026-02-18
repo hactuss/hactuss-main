@@ -44,11 +44,24 @@
             alt="doggo"
             class="doggo"
         />
-        <p>
-            Hello, my [psydonym/alias] is Hactuss. I make art, websites and
-            videos sometimes.
-        </p>
+        <div>
+            <p>
+                Hello, my [psydonym/alias] is Hactuss. I make art, websites and
+                videos sometimes. You can find most of my socials <a
+                    href="https://haj-links.vercel.app/"
+                    target="_blank">HERE.</a
+                >
+            </p>
+            <p>
+                This site is basically a bigger version of the hobby discription
+                from my <a
+                    href="https://hactuss-portfolio.vercel.app/"
+                    target="_blank">portfolio.</a
+                >
+            </p>
+        </div>
     </header>
+    <!-- --
     <div class="grid">
         <div
             class="col"
@@ -128,7 +141,7 @@
     <div class="topic-content">
         <h2>{content}</h2>
         <p>{story}</p>
-    </div>
+        </div>-->
     {#if false}
         <div>
             <h1>moving text</h1>
@@ -149,6 +162,9 @@
 </main>
 
 <style lang="scss">
+    * {
+        cursor: url("../lib/assets/Cursor.png") auto;
+    }
     .marquee {
         margin: 0 auto;
         white-space: nowrap;
@@ -242,9 +258,6 @@
         --pr-color: rgba(255, 0, 0, 0.5);
         --ft-color: rgba(255, 0, 0, 0.5);
         --st-color: rgba(255, 0, 0, 0.5);
-    }
-    * {
-        accent-color: purple;
     }
 
     .grid {
