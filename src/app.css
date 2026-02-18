@@ -4,7 +4,7 @@ https://www.dafont.com/de/diamondgrams.font
 */
 :root {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    --logo-text-proton-color: black;
+    font-size: 1.5rem;
 }
 
 * {
@@ -12,11 +12,16 @@ https://www.dafont.com/de/diamondgrams.font
     padding: 0;
     border: 0;
 }
-
+html {
+    background-color: rgb(240, 240, 240);
+}
 body {
-    background-color: black;
-    color: white;
-    /*padding-inline: 12.5%;*/
+    color: hotpink;
+    accent-color: hotpink;
+    padding-inline: 12.5%;
+}
+main {
+    background-color: white;
 }
 nav {
     background: #ffb4b4;
@@ -43,7 +48,14 @@ h1 {
 h4 {
     justify-self: center;
 }
+p {
+    font-size: 1rem;
+}
 svg {
     color: black;
     width: 1.5rem;
+}
+ul {
+    text-decoration: none;
+    list-style: none;
 }
