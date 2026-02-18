@@ -23,6 +23,10 @@ body {
 main {
     background-color: white;
 }
+header {
+    display: flex;
+    align-items: center;
+}
 nav {
     background: #ffb4b4;
     background: linear-gradient(
@@ -58,4 +62,11 @@ svg {
 ul {
     text-decoration: none;
     list-style: none;
+}
+button {
+    padding: 1px;
+    border-radius: 2px;
+}
+button:active {
+    background-color: red;
 }

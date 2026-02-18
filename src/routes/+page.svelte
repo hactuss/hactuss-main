@@ -1,99 +1,135 @@
 <script>
     let content = $state("default");
-    let story = $state("");
+    let story = $state("blablabla");
+    let story_cr = "creative stuff I do";
+    let story_pr = "productive stuff I do";
+    let story_ft = "free time stuff I do";
+    let story_st = "state stuff I do";
 
     function setDefault() {
         content = "default";
+        story = "blablabla";
     }
+
+    // for testing
+    let mobileinfo = $derived(true);
     let scrollText1 = $state("71");
     let scrollText2 = $state("72");
 </script>
 
+<!-- --
+{#if (mobileinfo = true)}
+    <div class="mobileinfo">
+        <div class="mobileinfobox">
+            <h2>Info</h2>
+            <p>
+                The device you are currently using is not supported by my
+                website. Howerver, I wont stop you from trying to.
+            </p>
+            <h6>- hactuss</h6>
+            <button
+                onclick={() => {
+                    console.log("pressed");
+                    mobileinfo = false;
+                }}>proceed at the risk of the site looking like trash</button
+            >
+        </div>
+    </div>
+{/if}
+-->
 <main>
-    <div>
+    <header>
+        <img
+            src="https://media1.tenor.com/m/mc3OyxhLazUAAAAC/doggo-doge.gif"
+            alt="doggo"
+            class="doggo"
+        />
         <p>
             Hello, my [psydonym/alias] is Hactuss. I make art, websites and
             videos sometimes.
         </p>
-    </div>
-    {#if false}
-        <div class="flex">
-            <div class="hea">creative</div>
-            <div class="hea">productive</div>
-            <div class="hea">free time</div>
-            <div class="hea">state</div>
-        </div>
-        <div class="grid">
-            <div
-                class="col cr"
-                on:mouseenter={() => {
-                    content = "creative";
-                }}
-                on:mouseleave={() => {
-                    setDefault();
-                }}
-            >
-                <h4>creative</h4>
+    </header>
+    <div class="grid">
+        <div
+            class="col"
+            onmouseenter={() => {
+                content = "creative";
+                story = story_cr;
+            }}
+            onmouseleave={() => {
+                setDefault();
+            }}
+        >
+            <h4>creative</h4>
+            <div class="cr">
                 <ul>
                     <li>art (ng)</li>
                     <li>video editing (yt)</li>
                 </ul>
             </div>
-            <div
-                class="col pr"
-                on:mouseenter={() => {
-                    content = "productive";
-                }}
-                on:mouseleave={() => {
-                    setDefault();
-                }}
-            >
-                <h4>productive</h4>
+        </div>
+        <div
+            class="col"
+            onmouseenter={() => {
+                content = "productive";
+                story = story_pr;
+            }}
+            onmouseleave={() => {
+                setDefault();
+            }}
+        >
+            <h4>productive</h4>
+            <div class="pr">
                 <ul>
                     <li>personal organization (obsidian)</li>
                     <li>office</li>
                     <li>ability farming</li>
                 </ul>
             </div>
-            <div
-                class="col ft"
-                on:mouseenter={() => {
-                    content = "free time";
-                }}
-                on:mouseleave={() => {
-                    setDefault();
-                }}
-            >
-                <h4>free time</h4>
+        </div>
+        <div
+            class="col"
+            onmouseenter={() => {
+                content = "free time";
+                story = story_ft;
+            }}
+            onmouseleave={() => {
+                setDefault();
+            }}
+        >
+            <h4>free time</h4>
+            <div class="ft">
                 <ul>
                     <li>linux rice</li>
                     <li>splatoon</li>
                     <li>boredom</li>
                 </ul>
             </div>
-            <div
-                class="col st"
-                on:mouseenter={() => {
-                    content = "state";
-                }}
-                on:mouseleave={() => {
-                    setDefault();
-                }}
-            >
-                <h4>state</h4>
+        </div>
+        <div
+            class="col"
+            onmouseenter={() => {
+                content = "state";
+                story = story_st;
+            }}
+            onmouseleave={() => {
+                setDefault();
+            }}
+        >
+            <h4>state</h4>
+            <div class="st">
                 <ul>
                     <li>future</li>
                     <li>selfhosting</li>
                 </ul>
             </div>
         </div>
-        <div class="topic-content">
-            <h2>{content}</h2>
-            <p>
-                {story}
-            </p>
-        </div>
-
+    </div>
+    <div class="topic-content">
+        <h2>{content}</h2>
+        <p>{story}</p>
+    </div>
+    {#if false}
         <div>
             <h1>moving text</h1>
             <div style:overflow="hidden">
@@ -165,41 +201,31 @@
         flex-shrink: 0;
         overflow-y: hidden;
     }
-    .st {
-        margin: 2%;
-        border: solid red 1px;
-        text-align: center;
-    }
     .one {
-        flex: 1;
+        position: absolute;
         animation: flex-one 3s infinite linear;
         width: 100px;
-        text-align: center;
     }
     .two {
-        flex: 0;
+        position: absolute;
         animation: flex-two 3s infinite linear;
         width: 100px;
-        text-align: center;
-    }
-    @if (flex = 0) {
-        display: none;
     }
 
     @keyframes flex-one {
         from {
-            flex: 1;
+            transform: translate(0, 0);
         }
         to {
-            flex: 0;
+            transform: translate(-100%, 0);
         }
     }
     @keyframes flex-two {
         from {
-            flex: 0;
+            transform: translate(0, 0);
         }
         to {
-            flex: 1;
+            transform: translate(-100%, 0);
         }
     }
     @keyframes scrolling-text {
@@ -212,10 +238,10 @@
     }
 
     :root {
-        --cr-color: rgba(255, 0, 0, 0.3);
-        --pr-color: rgba(255, 0, 0, 0.3);
-        --ft-color: rgba(255, 0, 0, 0.3);
-        --st-color: rgba(255, 0, 0, 0.3);
+        --cr-color: rgba(255, 0, 0, 0.5);
+        --pr-color: rgba(255, 0, 0, 0.5);
+        --ft-color: rgba(255, 0, 0, 0.5);
+        --st-color: rgba(255, 0, 0, 0.5);
     }
     * {
         accent-color: purple;
@@ -236,25 +262,44 @@
     }*/
 
     .col {
-        border: solid;
-        min-height: 200px;
         width: 100%;
     }
     .cr {
+        border: solid;
         border-image: linear-gradient(var(--cr-color), rgba(0, 0, 0, 0)) 1;
     }
     .pr {
+        border: solid;
         border-image: linear-gradient(var(--pr-color), rgba(0, 0, 0, 0)) 1;
     }
     .ft {
+        border: solid;
         border-image: linear-gradient(var(--ft-color), rgba(0, 0, 0, 0)) 1;
     }
     .st {
+        border: solid;
         border-image: linear-gradient(var(--st-color), rgba(0, 0, 0, 0)) 1;
     }
     .flex {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+    }
+    .mobileinfo {
+        position: absolute;
+        inset: 0 0 0 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .mobileinfobox {
+        background-color: rgba(33, 33, 33, 1);
+        border: solid black 5%;
+        border-radius: 10px;
+        margin: 5%;
+        padding: 2%;
+    }
+    .doggo {
+        width: 10%;
+        height: 10%;
+        margin-right: 1rem;
     }
 </style>

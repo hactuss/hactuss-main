@@ -9,6 +9,10 @@
         href="https://raw.githubusercontent.com/sindresorhus/modern-normalize/refs/heads/main/modern-normalize.css"
     />
     <title>hactuss.v.a</title>
+    <meta
+        name="discription"
+        content="Hactuss personal website. Do not open on mobile!"
+    />
 </svelte:head>
 
 <nav>
@@ -32,8 +36,9 @@
         </div>
         <h1>H A C T U S (S)</h1>
         <div>
-            Visit my portfolio <a href="https://hactuss-portfolio.vercel.app"
-                >HERE!</a
+            Visit my portfolio <a
+                href="https://hactuss-portfolio.vercel.app"
+                target="_blank">HERE!</a
             >
         </div>
     </div>
