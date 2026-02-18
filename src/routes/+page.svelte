@@ -11,100 +11,105 @@
 
 <main>
     <div>
-        <p>Hello, my [psydonym] is Hactuss.</p>
-    </div>
-    <div class="flex">
-        <div class="hea">creative</div>
-        <div class="hea">productive</div>
-        <div class="hea">free time</div>
-        <div class="hea">state</div>
-    </div>
-    <div class="grid">
-        <div
-            class="col cr"
-            on:mouseenter={() => {
-                content = "creative";
-            }}
-            on:mouseleave={() => {
-                setDefault();
-            }}
-        >
-            <h4>creative</h4>
-            <ul>
-                <li>art (ng)</li>
-                <li>video editing (yt)</li>
-            </ul>
-        </div>
-        <div
-            class="col pr"
-            on:mouseenter={() => {
-                content = "productive";
-            }}
-            on:mouseleave={() => {
-                setDefault();
-            }}
-        >
-            <h4>productive</h4>
-            <ul>
-                <li>personal organization (obsidian)</li>
-                <li>office</li>
-                <li>ability farming</li>
-            </ul>
-        </div>
-        <div
-            class="col ft"
-            on:mouseenter={() => {
-                content = "free time";
-            }}
-            on:mouseleave={() => {
-                setDefault();
-            }}
-        >
-            <h4>free time</h4>
-            <ul>
-                <li>linux rice</li>
-                <li>splatoon</li>
-                <li>boredom</li>
-            </ul>
-        </div>
-        <div
-            class="col st"
-            on:mouseenter={() => {
-                content = "state";
-            }}
-            on:mouseleave={() => {
-                setDefault();
-            }}
-        >
-            <h4>state</h4>
-            <ul>
-                <li>future</li>
-                <li>selfhosting</li>
-            </ul>
-        </div>
-    </div>
-    <div class="topic-content">
-        <h2>{content}</h2>
         <p>
-            {story}
+            Hello, my [psydonym/alias] is Hactuss. I make art, websites and
+            videos sometimes.
         </p>
     </div>
-
-    <div>
-        <h1>moing text</h1>
-        <div style:overflow="hidden">
-            <p class="marquee">
-                <span>1 2 3 4 5 6 7 8 9 0</span>
-            </p>
-            <p class="marquee2">
-                <span>&#160 1 2 3 4 5 6 7 8 9</span>
+    {#if false}
+        <div class="flex">
+            <div class="hea">creative</div>
+            <div class="hea">productive</div>
+            <div class="hea">free time</div>
+            <div class="hea">state</div>
+        </div>
+        <div class="grid">
+            <div
+                class="col cr"
+                on:mouseenter={() => {
+                    content = "creative";
+                }}
+                on:mouseleave={() => {
+                    setDefault();
+                }}
+            >
+                <h4>creative</h4>
+                <ul>
+                    <li>art (ng)</li>
+                    <li>video editing (yt)</li>
+                </ul>
+            </div>
+            <div
+                class="col pr"
+                on:mouseenter={() => {
+                    content = "productive";
+                }}
+                on:mouseleave={() => {
+                    setDefault();
+                }}
+            >
+                <h4>productive</h4>
+                <ul>
+                    <li>personal organization (obsidian)</li>
+                    <li>office</li>
+                    <li>ability farming</li>
+                </ul>
+            </div>
+            <div
+                class="col ft"
+                on:mouseenter={() => {
+                    content = "free time";
+                }}
+                on:mouseleave={() => {
+                    setDefault();
+                }}
+            >
+                <h4>free time</h4>
+                <ul>
+                    <li>linux rice</li>
+                    <li>splatoon</li>
+                    <li>boredom</li>
+                </ul>
+            </div>
+            <div
+                class="col st"
+                on:mouseenter={() => {
+                    content = "state";
+                }}
+                on:mouseleave={() => {
+                    setDefault();
+                }}
+            >
+                <h4>state</h4>
+                <ul>
+                    <li>future</li>
+                    <li>selfhosting</li>
+                </ul>
+            </div>
+        </div>
+        <div class="topic-content">
+            <h2>{content}</h2>
+            <p>
+                {story}
             </p>
         </div>
-    </div>
-    <div class="stc">
-        <p class="st one">{scrollText1}</p>
-        <p class="st two">{scrollText2}</p>
-    </div>
+
+        <div>
+            <h1>moving text</h1>
+            <div style:overflow="hidden">
+                <p class="marquee">
+                    <span>1 2 3 4 5 6 7 8 9 0</span>
+                </p>
+                <p class="marquee2">
+                    <span>&#160 1 2 3 4 5 6 7 8 9</span>
+                </p>
+            </div>
+        </div>
+        <div class="stc">
+            <p class="st one">{scrollText1}</p>
+            <p class="st two">{scrollText2}</p>
+        </div>
+    {/if}
 </main>
 
 <style lang="scss">
