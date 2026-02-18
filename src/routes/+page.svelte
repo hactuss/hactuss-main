@@ -162,9 +162,6 @@
 </main>
 
 <style lang="scss">
-    * {
-        cursor: url("../lib/assets/Cursor.png") auto;
-    }
     .marquee {
         margin: 0 auto;
         white-space: nowrap;
